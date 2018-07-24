@@ -1,6 +1,12 @@
 class TaskLister {
-  // your solution here
-  render() {
-    return (`<h1>Welcome to Flavortown</h1>`);
+
+  constructor() {
   }
+
+  init() { //set up listeners
+    ListsController.init();
+    TasksController.init();
+  }
+
+  render() { }
 }

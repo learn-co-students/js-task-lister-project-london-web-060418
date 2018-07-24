@@ -10,20 +10,49 @@
   <div id="main-content">
     <h1>Flatiron Task Lister</h1>
 
-    <form id="create-list-form" action="#" method="post">
-     <label for="new-list-title">Add a new list:</label>
-     <input required type="text" id="new-list-title" name="new-list-title" placeholder="title">
-     <input type="submit" value="Create New List">
-    </form>
+    <div id="app-content">
+      <div>
+      <div id="create-list-container" class="">
+        <form id="create-list-form" action="#" method="post">
+           <label for="new-list-title">Add a new list:</label>
+           <input required type="text" id="new-list-title" name="new-list-title" placeholder="title">
+           <input type="submit" value="Create New List">
+        </form>
+      </div>
 
-    <div id="app-content"></div>
+      <div id="create-task-container" class="">
+        <form id="create-task-form" action="#" method="post">
+            <select id="create-task-list-select" class="" name="listid">
+
+            </select>
+           <label for="new-task-description">Task Desc:</label>
+           <input required type="text" id="new-list-description" name="description" placeholder="description">
+           <label for="new-task-priority">Task Priority:</label>
+           <input required type="text" id="new-list-priority" name="priority" placeholder="priority">
+           <input type="submit" value="Create New Task">
+        </form>
+      </div>
+      </div>
+
+      <div id="lists">
+        <!-- Add list div elements in this containe -->
+
+      </div>
+    </div>
 
 
-    <script src="src/index.js"></script>
-    <script src="src/app.js"></script>
-    <script src="src/task.js"></script>
-    <script src="src/list.js"></script>
+
+
+
   </div><!-- #main-content -->
+
+  <script src="src/index.js"></script>
+  <script src="src/app.js"></script>
+  <script src="src/task.js"></script>
+  <script src="src/list.js"></script>
+  <script src="src/taskLister.js"></script>
+  <script src="src/tasksController.js"></script>
+  <script src="src/listsController.js"></script>
 
 </body>
 </html>

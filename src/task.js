@@ -1,3 +1,6 @@
 class Task {
-  // your code here
+  constructor(text) {
+    this.text = text
+  }
+
 }

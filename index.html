@@ -18,11 +18,30 @@
 
     <div id="app-content"></div>
 
+      <form id="create-task-form">
+        <label for="parent-list">Select List:</label>
+        <select id="parent-list">
+        <!-- Major key alert:
+        read the docs for HTML option selected:
+        https://www.w3schools.com/tags/att_option_selected.asp -->
+        <!-- for each element in array of all do
+      <option value="element">element</option> -->
+          <option value="Choose a list:" selected>
+            <!-- <script>  </script> -->
+          </option>
+        </select>
+        <label for="new-task-description">Task description:</label>
+        <input required type="text" id="new-task-description" placeholder="description">
+        <label for="new-task-priority">Priority level:</label>
+        <input type="text" id="new-task-priority" placeholder="priority">
+        <input type="submit" id="task-button" value="Create New Task">
+    </form>
 
-    <script src="src/index.js"></script>
     <script src="src/app.js"></script>
+    <script src="src/taskLister.js"></script>
     <script src="src/task.js"></script>
     <script src="src/list.js"></script>
+    <script src="src/index.js"></script>
   </div><!-- #main-content -->
 
 </body>

@@ -2,13 +2,13 @@ document.addEventListener('DOMContentLoaded', function(e){
   console.log('this file is linked')
 })
 
-document.getElementById("list-container").addEventListener("click",function(e) {
+document.getElementById("lists").addEventListener("click",function(e) {
 // e.target was the clicked element
-  if (e.target.className === 'Delete-List-Button') {
+  if (e.target.className === 'delete-list') {
     // console.log("Anchor element clicked!");
     let targetId = e.target.id
     let elementToRemove = e.target.parentNode
-    document.getElementById("list-container").removeChild(elementToRemove)
+    document.getElementById("lists").removeChild(elementToRemove)
     deleteOption(targetId)
     deleteList(targetId)
   }
@@ -51,14 +51,14 @@ function createList(){
 }
 
 function createListContainer(){
-  let nameElement = document.createElement('p')
+  let nameElement = document.createElement('h3')
   nameElement.innerText = getListName()
 
   let element = document.createElement('div')
   element.id = `container-${setListId()}`
   element.appendChild(nameElement)
   element.appendChild(createDeleteButton())
-  document.getElementById("list-container").appendChild(element)
+  document.getElementById("lists").appendChild(element)
 }
 
 function addOption(){
@@ -73,7 +73,7 @@ function createDeleteButton(){
   let deleteButton = document.createElement('button')
   deleteButton.innerText = "Delete"
   deleteButton.id = setListId()
-  deleteButton.className = "Delete-List-Button"
+  deleteButton.className = "delete-list"
   return deleteButton
 }
 

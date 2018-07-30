@@ -1,6 +1,6 @@
-document.getElementById("list-container").addEventListener("click",function(e) {
+document.getElementById("lists").addEventListener("click",function(e) {
 // e.target was the clicked element
-  if (e.target.className === 'Delete-Task-Button') {
+  if (e.target.className === 'delete-task') {
     // console.log("Anchor element clicked!");
     let targetId = e.target.id
     let elementToRemove = e.target.parentNode
@@ -85,7 +85,7 @@ function createTaskDeleteButton(){
   let deleteButton = document.createElement('button')
   deleteButton.innerText = "X"
   deleteButton.id = setTaskId()
-  deleteButton.className = "Delete-Task-Button"
+  deleteButton.className = "delete-task"
   return deleteButton
 }
 
